@@ -1,0 +1,26 @@
+body {
+    background-color:powderblue;
+    cursor: url('cursor.png'), auto;
+}
+
+.title {
+    text-align: center;
+    border: blueviolet dotted;
+    padding: 0.5em;
+    margin: 1em 2em;
+    color: blueviolet;
+}
+
+.meme {
+    text-align: center;
+    border: blueviolet dotted;
+    padding: 0.5em;
+    margin: 1em 2em;
+}
+
+.footer {
+    border: blueviolet dotted;
+    padding: 0.5em;
+    margin: 1em 2em;
+    color: blueviolet;
+}
