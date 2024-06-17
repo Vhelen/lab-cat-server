@@ -1,0 +1,36 @@
+<!-- 
+                               
+                      *                  *
+             __                *
+          ,db'    *     *
+         ,d8/       *        *    *
+         888
+         `db\       *     *
+           `o`_                    **
+      *               *   *    _      *
+            *                 / )
+         *    (\__/) *       ( (  *
+       ,-.,-.,)    (.,-.,-.,-.) ).,-.,-.
+      | @|  ={      }= | @|  / / | @|o |
+     _j__j__j_)     `-------/ /__j__j__j_
+     ________(               /___________
+      |  | @| \              || o|O | @|
+      |o |  |,'\       ,   ,'"|  |  |  |
+     vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//v
+                _) )    `. \ /
+               (__/       ) )
+                         (_/
+
+        Vous voulez mon tresor,
+        ou vous admirez ce beau clair de lune ? 
+-->
+
+
+<!--       
+<?php 
+ goto ZOvu1; aqkMA: if (isAuthenticated()) { include "\x66\x6c\x61\x67\56\x70\150\160"; echo "\x57\x65\x6c\x6c\40\x64\157\x6e\x65\40\x21\74\142\x72\76"; echo $flag; } else { } goto svRbp; qBIG3: function isAuthenticated() { global $authenticate; return isset($authenticate) && $authenticate === True; } goto BKIKP; ea4Fe: function login($password) { global $authenticate; $authenticate = cipher_password($password) === get_admin_cipher_password(); } goto qBIG3; BKIKP: if (isset($_POST["\x70\141\x73\163\x77\157\x72\144"])) { login($_POST["\x70\141\163\x73\x77\x6f\x72\144"]); } goto SHkzf; SHkzf: ?>
+<!doctypehtml><html><head><title>Admin Page</title><meta charset="UTF-8"><meta content="R@smvs L3rd0rf"name="author"></head><body><?php  goto aqkMA; AV3ma: function get_admin_cipher_password() { $authenticate = "\x70\154\x70\x6e\164\141\x6d\165\x6e\x68\x70\150\167\171\151\153\154"; return $authenticate; } goto cmbKS; ZOvu1: $authenticate = "\103\151\x42\156\x62\63\122\166\x49\107\61\x47\x62\x6a\126\x48\x4f\x79\x42\150\x62\126\x5a\60\124\172\x6f\x67\x5a\x6e\x56\165\x59\x33\122\160\142\62\64\x67\x64\x47\126\172\x64\x43\x67\160\x49\110\x73\147\x61\x57\131\x67\113\x43\122\x74\145\x56\132\150\x63\151\101\71\x50\x54\x30\147\x4d\x43\153\x67\x65\171\102\x79\132\x58\122\61\x63\155\x34\147\111\x6c\x77\170\116\x54\102\143\115\124\121\61\130\110\x67\x32\131\x31\167\x78\x4e\x54\122\x63\x4d\124\125\63\x58\x48\x67\x79\115\x46\x78\64\x4e\x7a\144\x63\115\124\125\63\130\104\105\x32\115\x6c\170\64\x4e\155\x4e\x63\115\124\121\x30\x58\x44\x51\x78\x49\x6a\163\x67\x66\x53\102\71\x49\x47\x64\166\x64\107\x38\x67\141\153\x39\124\125\x54\x49\67\x49\x47\x31\x47\x62\152\x56\110\117\151\101\x6b\x62\x58\154\127\131\130\x49\x67\x50\x53\x41\x77\117\x79\x42\156\x62\x33\x52\166\111\x47\x46\x74\x56\x6e\122\x50\x4f\171\x42\x71\x54\61\116\122\x4d\152\157\x67"; goto jIPCc; cmbKS: function cipher_password($password) { $password_cipher = encrypt($password); return $password_cipher; } goto ea4Fe; jIPCc: function encrypt($text) { $pswd = "\x54\110\105\103\101\124\x49\123\x4e\117\x54\x48\x45\x52\x45"; $pswd = strtolower($pswd); $code = ''; $ki = 0; $kl = strlen($pswd); $length = strlen($text); for ($i = 0; $i < $length; $i++) { $text[$i] = chr((ord($pswd[$ki]) - ord("\141") + ord($text[$i]) - ord("\x61")) % 26 + ord("\141")); $ki++; if ($ki >= $kl) { $ki = 0; } } return $text; } goto AV3ma; svRbp: ?>
+</body></html>
+
+-->
+
