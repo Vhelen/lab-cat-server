@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>House of cats </title>
+    <title>House of cats v1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <style>
@@ -60,10 +60,6 @@
         -webkit-overflow-scrolling: touch;
       }
     </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="features.css" rel="stylesheet">
   </head>
   <body>
     <?php
@@ -74,17 +70,18 @@
         die();
       }
 
-      if( $ua !== "cat") {
-        echo 'You are not a cat, only cats are authorized !';
-        die();
-      }
+      // if( $ua !== "cat") {
+      //   echo 'We have detected from your user agent that you are not a cat, only a cat is authorized!';
+      //   die();
+      // }
 
       $servername = "localhost:3306";
-      $username = "db_cat";
-      $password = "password";
+      $username = "cat_admin";
+      $password = "Mi0ihD55Fbc6pc4Ijh6mmhYS4T7UBZ5oG1Jf51aCEHSfK3Ee2z";
+      $db_name = "house_of_cats";
 
       try {
-        $conn = new PDO("mysql:host=$servername;dbname=house_of_cats", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=$db_name", $username, $password);
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       } catch(PDOException $e) {
@@ -150,7 +147,7 @@
             foreach ($articles as $row) {
           ?>
           <div class="col">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(<?php echo $row['image'] ?>); background-size:     cover;   background-repeat:   no-repeat; background-position: center center;">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url(<?php echo 'img/'.$row['image'] ?>); background-size:     cover;   background-repeat:   no-repeat; background-position: center center;">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                 <h4 class="pt-5 mt-5 mb-4 "><?php echo $row['title'] ?></h4>
                 <ul class="d-flex list-unstyled mt-auto">
@@ -169,25 +166,10 @@
           <?php  
             }
           }
-
-         
-
         ?>
-        
-
-        
-
-
-
       </div>
     </div>
-
-    
-
-    
   </main>
-      
   </body>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
